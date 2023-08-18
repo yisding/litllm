@@ -2,8 +2,8 @@
  🔥 litllm - the last LLM wrapper you'll see before you go to sleep at night
  🔥 Get these MF'ing 🐍s out this MF'ing 🔥 -- SLJ -- MS -- YD
  🔥 Step 1: npm i litllm
- 🔥 Step 2: npm i (openai|anthropic|replicate)
- 🔥 Step 3: get lit
+ 🔥 Step 2: ???
+ 🔥 Step 3: get lit!
  */
 
 import {
