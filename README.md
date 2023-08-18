@@ -25,7 +25,7 @@ completion("gpt-4", [{ role: "user", content: "What's lit?" }]).then((res) => {
 Run:
 
 ```bash
-node lit.mjs
+node lit.js
 ```
 
 ## Anthropic:
@@ -47,7 +47,7 @@ completion("claude-2", [{ role: "user", content: "What's lit?" }]).then((res) =>
 Run:
 
 ```bash
-node lit.mjs
+node lit.js
 ```
 
 ## Use (Llama2 Replicate):
@@ -69,7 +69,7 @@ completion("Llama-2-70b-chat-4bit", [{ role: "user", content: "What's lit?" }]).
 Run:
 
 ```bash
-node lit.mjs
+node lit.js
 ```
 
 ## The lit family
