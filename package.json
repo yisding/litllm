@@ -1,6 +1,6 @@
 {
   "name": "litllm",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "I'd give it a perfect 6/7",
   "scripts": {
     "test": "echo \"Error: code too perfect\" && exit 1",
@@ -17,5 +17,6 @@
     "typescript": "^5.1.6"
   },
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.js"
+  "main": "./dist/index.js",
+  "repository": "github:yisding/litllm"
 }

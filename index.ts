@@ -16,6 +16,13 @@ import {
   OpenAI,
 } from "./node_modules/llamaindex/src/llm/LLM"; // Yes of course 🔥llm uses LITS
 
+/**
+ 🔥 Chat with a model 
+ 🔥 @param model the LLM model
+ 🔥 @param messages the messages to chat with
+ 🔥 @param options additional model options like temperature, topP, and maxTokens
+ 🔥 @returns the chat response
+ */
 export async function completion(
   model: string,
   messages: ChatMessage[],
