@@ -6,11 +6,13 @@
 word2vec("litellm") - word2vec("🐍") + word2vec("🤯") === word2vec("litllm") // probably
 ```
 
-## OpenAI:
+## Setup
 
 ```bash
 npm i litllm
 ```
+
+### OpenAI:
 
 lit.js:
 
@@ -22,17 +24,7 @@ completion("gpt-4", [{ role: "user", content: "What's lit?" }]).then((res) => {
 });
 ```
 
-Run:
-
-```bash
-node lit.js
-```
-
-## Anthropic:
-
-```bash
-npm i litllm
-```
+### Anthropic:
 
 lit.js:
 
@@ -44,17 +36,7 @@ completion("claude-2", [{ role: "user", content: "What's lit?" }]).then((res) =>
 });
 ```
 
-Run:
-
-```bash
-node lit.js
-```
-
-## Use (Llama2 Replicate):
-
-```bash
-npm i litllm
-```
+### Llama2 Replicate:
 
 lit.js:
 
@@ -66,7 +48,7 @@ completion("Llama-2-70b-chat-4bit", [{ role: "user", content: "What's lit?" }]).
 });
 ```
 
-Run:
+## Run
 
 ```bash
 node lit.js
@@ -76,5 +58,6 @@ node lit.js
 
 - [litellm](https://github.com/BerriAI/litellm)
 - [LITS](https://github.com/run-llama/LlamaIndexTS)
+- [StreamLit](https://github.com/streamlit/streamlit)
 - [lighttpd](https://github.com/lighttpd)
 - Submit PR to add your 🔥 package

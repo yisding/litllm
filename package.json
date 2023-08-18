@@ -1,6 +1,6 @@
 {
   "name": "litllm",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "I'd give it a perfect 6/7",
   "scripts": {
     "test": "echo \"Error: code too perfect\" && exit 1",
