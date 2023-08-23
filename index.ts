@@ -17,6 +17,15 @@ import {
 } from "./node_modules/llamaindex/src/llm/LLM"; // Yes of course 🔥llm uses LITS
 
 /**
+ 🔥 Checks if model is an OpenAI fine tuned model
+ 🔥 @param model model name
+ 🔥 @returns if the model matches the OpenAI fine tuning format
+ */
+export function isOpenAIFineTunedModel(model: string): boolean {
+  return model.startsWith("ft:") && model.split(":")?.[1] in ALL_AVAILABLE_OPENAI_MODELS;
+}
+
+/**
  🔥 Chat with a model 
  🔥 @param model the LLM model
  🔥 @param messages the messages to chat with
@@ -28,7 +37,7 @@ export async function completion(
   messages: ChatMessage[],
   options: { temperature?: number; topP?: number; maxTokens?: number }
 ): Promise<ChatResponse> {
-  if (model in ALL_AVAILABLE_OPENAI_MODELS) {
+  if (model in ALL_AVAILABLE_OPENAI_MODELS || isOpenAIFineTunedModel(model)) {
     return await new OpenAI({
       model: model as keyof typeof ALL_AVAILABLE_OPENAI_MODELS,
       ...options,
