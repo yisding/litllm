@@ -7,6 +7,7 @@
  */
 
 import {
+  ALL_AVAILABLE_ANTHROPIC_MODELS,
   ALL_AVAILABLE_LLAMADEUCE_MODELS,
   ALL_AVAILABLE_OPENAI_MODELS,
   Anthropic,
@@ -22,7 +23,10 @@ import {
  🔥 @returns if the model matches the OpenAI fine tuning format
  */
 export function isOpenAIFineTunedModel(model: string): boolean {
-  return model.startsWith("ft:") && model.split(":")?.[1] in ALL_AVAILABLE_OPENAI_MODELS;
+  return (
+    model.startsWith("ft:") &&
+    model.split(":")?.[1] in ALL_AVAILABLE_OPENAI_MODELS
+  );
 }
 
 /**
@@ -47,7 +51,14 @@ export async function completion(
       model: model as keyof typeof ALL_AVAILABLE_LLAMADEUCE_MODELS,
       ...options,
     }).chat(messages);
+  } else if (model in ALL_AVAILABLE_ANTHROPIC_MODELS) {
+    return await new Anthropic({
+      model: model as keyof typeof ALL_AVAILABLE_ANTHROPIC_MODELS,
+      ...options,
+    }).chat(messages);
   } else {
-    return await new Anthropic({ model: model, ...options }).chat(messages);
+    throw new Error(
+      `Model ${model} not found. Please check the model name and try again.`
+    );
   }
 }
