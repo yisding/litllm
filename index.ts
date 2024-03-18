@@ -15,7 +15,7 @@ import {
   ChatResponse,
   LlamaDeuce,
   OpenAI,
-} from "llamaindex"; // Yes of course 🔥llm uses LITS
+} from "llamaindex/llm/index"; // Yes of course 🔥llm uses LITS
 
 /**
  🔥 Checks if model is an OpenAI fine tuned model
