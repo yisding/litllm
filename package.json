@@ -10,11 +10,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "llamaindex": "^0.0.37"
+    "llamaindex": "^0.2.0"
   },
   "devDependencies": {
-    "tsup": "^8.0.1",
-    "typescript": "^5.3.2"
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.2"
   },
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",

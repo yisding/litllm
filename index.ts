@@ -15,7 +15,7 @@ import {
   ChatResponse,
   LlamaDeuce,
   OpenAI,
-} from "./node_modules/llamaindex/src/llm/LLM"; // Yes of course 🔥llm uses LITS
+} from "llamaindex"; // Yes of course 🔥llm uses LITS
 
 /**
  🔥 Checks if model is an OpenAI fine tuned model
@@ -45,17 +45,17 @@ export async function completion(
     return await new OpenAI({
       model: model as keyof typeof ALL_AVAILABLE_OPENAI_MODELS,
       ...options,
-    }).chat(messages);
+    }).chat({ messages });
   } else if (model in ALL_AVAILABLE_LLAMADEUCE_MODELS) {
     return await new LlamaDeuce({
       model: model as keyof typeof ALL_AVAILABLE_LLAMADEUCE_MODELS,
       ...options,
-    }).chat(messages);
+    }).chat({ messages });
   } else if (model in ALL_AVAILABLE_ANTHROPIC_MODELS) {
     return await new Anthropic({
       model: model as keyof typeof ALL_AVAILABLE_ANTHROPIC_MODELS,
       ...options,
-    }).chat(messages);
+    }).chat({ messages });
   } else {
     throw new Error(
       `Model ${model} not found. Please check the model name and try again.`
