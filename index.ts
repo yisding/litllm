@@ -41,6 +41,10 @@ export async function completion(
     "gpt-4-turbo",
     "gpt-4o",
     "gpt-4o-mini",
+    "gpt-4.1",
+    "gpt-4.1-turbo",
+    "gpt-5",
+    "gpt-5-turbo",
   ];
   
   // Anthropic models
@@ -51,6 +55,10 @@ export async function completion(
     "claude-3-5-sonnet-20241022",
     "claude-2.1",
     "claude-instant-1.2",
+    "claude-4-opus",
+    "claude-4-sonnet",
+    "claude-4.1-opus",
+    "claude-4.1-sonnet",
   ];
   
   // Llama models via Replicate
@@ -63,6 +71,9 @@ export async function completion(
     "Llama-2-7b-chat-4bit",
     "llama-3-70b-instruct",
     "llama-3-8b-instruct",
+    "llama-4-70b",
+    "llama-4-405b",
+    "llama-4-8b",
   ];
 
   if (openAIModels.includes(model) || isOpenAIFineTunedModel(model)) {
