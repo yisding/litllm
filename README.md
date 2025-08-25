@@ -36,14 +36,14 @@ completion("claude-2", [{ role: "user", content: "What's lit?" }]).then((res) =>
 });
 ```
 
-### Llama2 Replicate:
+### Llama Models (via OpenAI-compatible API):
 
 lit.js:
 
 ```js
 const { completion } = require("litllm");
-process.env["REPLICATE_API_TOKEN"] = "r8_wouldntyouliketoknow"; // 🎩 cause i'm a token
-completion("Llama-2-70b-chat-4bit", [{ role: "user", content: "What's lit?" }]).then((res) => {
+process.env["LLAMA_API_BASE"] = "http://localhost:8000/v1"; // Your Llama API endpoint
+completion("llama-3.1-70b", [{ role: "user", content: "What's lit?" }]).then((res) => {
   console.log(res.message.content);
 });
 ```
@@ -57,7 +57,7 @@ node lit.js
 ## The lit family
 
 - [litellm](https://github.com/BerriAI/litellm)
-- [LITS](https://github.com/run-llama/LlamaIndexTS)
+- [LangChain.js](https://github.com/langchain-ai/langchainjs)
 - [StreamLit](https://github.com/streamlit/streamlit)
 - [lighttpd](https://github.com/lighttpd)
 - Submit PR to add your 🔥 package
