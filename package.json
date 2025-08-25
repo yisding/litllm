@@ -10,7 +10,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "llamaindex": "^0.2.0"
+    "@llamaindex/anthropic": "^0.3.23",
+    "@llamaindex/openai": "^0.4.17",
+    "@llamaindex/replicate": "^0.0.62",
+    "llamaindex": "^0.11.27"
   },
   "devDependencies": {
     "tsup": "^8.0.2",
